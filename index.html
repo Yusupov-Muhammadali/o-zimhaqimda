@@ -939,7 +939,7 @@
     <section class="hero" id="hero">
         <div class="container hero__warapper">
             <div class="hero__content">
-                <h1 class="hero__title">Salom, men Muhammad Ali. Hozirda <span class="typing-text"></span> <br> fanida o'qiyapman</h1>
+                <h1 class="hero__title"><span id="heroHi">Salom, men Muhammad Ali. Hozirda</span> <span class="typing-text"></span> <br> <span id="hero-end">fanida o'qiyapman</span></h1>  
                 <p class="hero__desc">Frontendda men HTML, CSS va JavaScript bilan ishlayman.</p>
                 <a href="#about" class="hero__link">Men haqimda</a>
             </div>
@@ -997,7 +997,7 @@
 
     <section class="friends" id="friends">
         <div class="container">
-            <h2 class="friends__title">Do'stlarim</h2>
+            <h2 class="friends__title" id="friendsTitle ">Do'stlarim</h2>
                  <ul class="friends__list">
                     <li class="friends__item saman"><img src="./rasm_ali.png" alt=""></li>
                     <li class="friends__item odil"><img src="./rasm_ali.png" alt=""></li>
@@ -1164,21 +1164,14 @@
 
 
 
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
-        <script>
-
-
-// Tarjimalar
+<script>
+// ==================== TARJIMALAR ====================
 const translations = {
     uz: {
-        // Header
         home: "Bosh sahifa",
         about: "Men haqimda",
         friends: "Do'stlarim",
@@ -1186,40 +1179,43 @@ const translations = {
         teachers: "Ustozlarim",
         contact: "Men bilan bog'lanish",
 
-        // Hero
-        heroTitle: "Salom, men Muhammad Ali. Hozirda <span class='typing-text'></span> <br> fanida o'qiyapman",
+        heroHi: "Salom, men Muhammad Ali. Hozirda",
+        heroStudy: "fanida o'qiyapman",
         heroDesc: "Frontendda men HTML, CSS va JavaScript bilan ishlayman.",
         heroBtn: "Men haqimda",
 
-        // About
         aboutTitle: "Men haqimda",
         aboutDesc: "Men PDP School’da 3 yildan beri tahsil olaman. Hozirda 7-B sinf o‘quvchisiman.<br>Mening qiziqishlarim frontend dasturlash, Figma dizayn qilish, matematika va ingliz tili kabi fanlarga yo‘naltirilgan.",
 
-        // Friends
         friendsTitle: "Do'stlarim",
-
-        // Projects
         projectsTitle: "Loyihalarim",
-
-        // Teachers
         teachersTitle: "Ustozlarim",
+
         teacher1: "Shahlo Donyorova",
         teacher1Desc: "Ingliz tili ustozim menga yangi so‘zlar va erkin gapirishni o‘rgatadi.",
+
         teacher2: "Naima Roziyeva",
         teacher2Desc: "Kuratorim menga tartib, motivatsiya va harakat qilishni o‘rgatadi.",
+
         teacher3: "Zoyidjon Nasretdinov",
         teacher3Desc: "Frontend menga sayt yaratish va kreativ fikrlashni o‘rgatadi.",
+
         teacher4: "Otabek Xo’shboqov",
         teacher4Desc: "Matematika ustozim mantiqiy fikrlash va tez ishlashni o‘rgatadi.",
 
-        // Contact
         contactPhone: "Telefon: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
         contactAddress: "Manzil: Toshkent, O'zbekiston",
+
         namePlaceholder: "Ismingiz",
         emailPlaceholder: "Email manzilingiz",
         messagePlaceholder: "Xabar",
-        sendBtn: "Yuborish"
+
+        sendBtn: "Yuborish",
+
+        alertSuccess: "Xabar yuborildi!",
+        alertFill: "Iltimos, barcha maydonlarni to'ldiring!",
+        alertError: "Xatolik yuz berdi!"
     },
 
     ru: {
@@ -1230,9 +1226,10 @@ const translations = {
         teachers: "Мои учителя",
         contact: "Связаться со мной",
 
-        heroTitle: "Привет, я Мухаммад Али. Сейчас я учусь на <span class='typing-text'></span>",
-        heroDesc: "Я работаю с HTML, CSS и JavaScript в Frontend.",
-        heroBtn: "Подробнее обо мне",
+        heroHi: "Привет, я Мухаммад Али. Сейчас",
+        heroStudy: "предмет",
+        heroDesc: "Я работаю с HTML, CSS и JavaScript во Frontend.",
+        heroBtn: "Обо мне",
 
         aboutTitle: "Обо мне",
         aboutDesc: "Я учусь в PDP School уже 3 года. Сейчас я ученик 7 класса.<br>Мои интересы: frontend разработка, дизайн в Figma, математика и английский язык.",
@@ -1243,20 +1240,29 @@ const translations = {
 
         teacher1: "Шахло Донёрова",
         teacher1Desc: "Учитель английского языка учит меня новым словам и свободной речи.",
+
         teacher2: "Наима Розыева",
         teacher2Desc: "Мой куратор учит меня дисциплине, мотивации и действию.",
+
         teacher3: "Зойиджон Насретдинов",
         teacher3Desc: "Frontend учит меня создавать сайты и креативно мыслить.",
+
         teacher4: "Отабек Хошбоков",
         teacher4Desc: "Учитель математики учит меня логическому мышлению и быстрой работе.",
 
         contactPhone: "Телефон: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
         contactAddress: "Адрес: Ташкент, Узбекистан",
+
         namePlaceholder: "Ваше имя",
         emailPlaceholder: "Ваш Email",
         messagePlaceholder: "Сообщение",
-        sendBtn: "Отправить"
+
+        sendBtn: "Отправить",
+
+        alertSuccess: "Сообщение отправлено!",
+        alertFill: "Пожалуйста, заполните все поля!",
+        alertError: "Произошла ошибка!"
     },
 
     en: {
@@ -1267,7 +1273,8 @@ const translations = {
         teachers: "My Teachers",
         contact: "Contact Me",
 
-        heroTitle: "Hello, I'm Muhammad Ali. Currently studying in <span class='typing-text'></span>",
+        heroHi: "Hi, I'm Muhammad Ali. Currently studying",
+        heroStudy: "subjects",
         heroDesc: "I work with HTML, CSS and JavaScript in Frontend.",
         heroBtn: "About Me",
 
@@ -1280,228 +1287,260 @@ const translations = {
 
         teacher1: "Shahlo Donyorova",
         teacher1Desc: "My English teacher teaches me new words and fluent speaking.",
+
         teacher2: "Naima Roziyeva",
         teacher2Desc: "My curator teaches me discipline, motivation and action.",
+
         teacher3: "Zoyidjon Nasretdinov",
         teacher3Desc: "Frontend teaches me to create websites and think creatively.",
+
         teacher4: "Otabek Xo’shboqov",
         teacher4Desc: "My math teacher teaches me logical thinking and fast work.",
 
         contactPhone: "Phone: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
         contactAddress: "Address: Tashkent, Uzbekistan",
+
         namePlaceholder: "Your Name",
         emailPlaceholder: "Your Email",
         messagePlaceholder: "Message",
-        sendBtn: "Send"
+
+        sendBtn: "Send",
+
+        alertSuccess: "Message sent!",
+        alertFill: "Please fill in all fields!",
+        alertError: "An error occurred!"
     }
 };
 
-// Tilni o'zgartirish funksiyasi
-function changeLanguage(lang) {
-    document.documentElement.lang = lang;
+// ==================== TYPING WORDS ====================
+const typingWords = {
+    uz: ["Frontend", "Ingliz tili", "Matematika", "Figma"],
+    ru: ["Frontend", "Английский", "Математика", "Figma"],
+    en: ["Frontend", "English", "Mathematics", "Figma"]
+};
 
-    // Navigatsiya
-    const navLinks = document.querySelectorAll('.nav__list a');
-    navLinks[0].textContent = translations[lang].home;
-    navLinks[1].textContent = translations[lang].about;
-    navLinks[2].textContent = translations[lang].friends;
-    navLinks[3].textContent = translations[lang].projects;
-    navLinks[4].textContent = translations[lang].teachers;
-    navLinks[5].textContent = translations[lang].contact;
+// ==================== GLOBAL ====================
+let wordIndex = 0;
+let letterIndex = 0;
+let isDeleting = false;
+let currentLang = "uz";
 
-    // Hero
-    document.querySelector('.hero__title').innerHTML = translations[lang].heroTitle;
-    document.querySelector('.hero__desc').textContent = translations[lang].heroDesc;
-    document.querySelector('.hero__link').textContent = translations[lang].heroBtn;
+const typingElement = document.querySelector(".typing-text");
+let typingTimeout;
 
-    // About
-    document.querySelectorAll('.section__title')[0].textContent = translations[lang].aboutTitle;
-    document.querySelector('.section__desc').innerHTML = translations[lang].aboutDesc;
+// ==================== TYPING EFFECT ====================
+function typeEffect() {
 
-    // Friends
-    document.querySelector('.friends__title').textContent = translations[lang].friendsTitle;
+    const words = typingWords[currentLang];
+    const currentWord = words[wordIndex];
 
-    // Projects
-    document.querySelectorAll('.section__title')[1].textContent = translations[lang].projectsTitle;
+    if (!isDeleting) {
+        typingElement.textContent = currentWord.slice(0, letterIndex++);
+    } else {
+        typingElement.textContent = currentWord.slice(0, letterIndex--);
+    }
 
-    // Teachers
-    document.querySelectorAll('.section__title')[2].textContent = translations[lang].teachersTitle;
-    
-    const teacherNames = document.querySelectorAll('.ustoz__name');
-    const teacherDescs = document.querySelectorAll('.ustoz__desc');
-    
-    teacherNames[0].textContent = translations[lang].teacher1;
-    teacherDescs[0].textContent = translations[lang].teacher1Desc;
-    teacherNames[1].textContent = translations[lang].teacher2;
-    teacherDescs[1].textContent = translations[lang].teacher2Desc;
-    teacherNames[2].textContent = translations[lang].teacher3;
-    teacherDescs[2].textContent = translations[lang].teacher3Desc;
-    teacherNames[3].textContent = translations[lang].teacher4;
-    teacherDescs[3].textContent = translations[lang].teacher4Desc;
+    let speed = isDeleting ? 70 : 130;
 
-    // Contact
-    document.querySelector('.ism').textContent = translations[lang].contactPhone;
-    document.querySelector('.em').textContent = translations[lang].contactEmail;
-    document.querySelector('.manzil').textContent = translations[lang].contactAddress;
-    
-    document.querySelector('.name').placeholder = translations[lang].namePlaceholder;
-    document.querySelector('.email').placeholder = translations[lang].emailPlaceholder;
-    document.querySelector('.xabar').placeholder = translations[lang].messagePlaceholder;
-    document.querySelector('.men__btn').textContent = translations[lang].sendBtn;
+    if (!isDeleting && letterIndex === currentWord.length + 1) {
+        speed = 1500;
+        isDeleting = true;
+    }
+
+    if (isDeleting && letterIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    typingTimeout = setTimeout(typeEffect, speed);
 }
 
-// Select o'zgarganda
-document.getElementById('language').addEventListener('change', (e) => {
-    changeLanguage(e.target.value);
-});
+// ==================== LANGUAGE CHANGE ====================
+function changeLanguage(lang) {
 
-// Sahifa yuklanganda default til (uz)
-document.addEventListener('DOMContentLoaded', () => {
-    changeLanguage('uz');
-});
+    currentLang = lang;
+    const t = translations[lang];
 
+    // NAVIGATION
+    const navLinks = document.querySelectorAll(".nav__list a");
 
+    navLinks[0].textContent = t.home;
+    navLinks[1].textContent = t.about;
+    navLinks[2].textContent = t.friends;
+    navLinks[3].textContent = t.projects;
+    navLinks[4].textContent = t.teachers;
+    navLinks[5].textContent = t.contact;
 
+    // HERO
+    document.getElementById("heroHi").textContent = t.heroHi;
+    document.getElementById("hero-end").textContent = t.heroStudy;
 
+    document.querySelector(".hero__desc").textContent = t.heroDesc;
+    document.querySelector(".hero__link").textContent = t.heroBtn;
 
+    // ABOUT
+    document.querySelectorAll(".section__title")[0].textContent = t.aboutTitle;
+    document.querySelector(".section__desc").innerHTML = t.aboutDesc;
 
+    // FRIENDS
+    document.querySelector(".friends__title").textContent = t.friendsTitle;
 
+    // PROJECTS
+    document.querySelectorAll(".section__title")[1].textContent = t.projectsTitle;
 
+    // TEACHERS
+    document.querySelectorAll(".section__title")[2].textContent = t.teachersTitle;
 
+    // TEACHER NAMES
+    const teacherNames = document.querySelectorAll(".ustoz__name");
+    const teacherDescs = document.querySelectorAll(".ustoz__desc");
 
+    teacherNames[0].textContent = t.teacher1;
+    teacherDescs[0].textContent = t.teacher1Desc;
 
+    teacherNames[1].textContent = t.teacher2;
+    teacherDescs[1].textContent = t.teacher2Desc;
 
+    teacherNames[2].textContent = t.teacher3;
+    teacherDescs[2].textContent = t.teacher3Desc;
 
+    teacherNames[3].textContent = t.teacher4;
+    teacherDescs[3].textContent = t.teacher4Desc;
 
+    // CONTACT
+    document.querySelector(".ism").textContent = t.contactPhone;
+    document.querySelector(".em").textContent = t.contactEmail;
+    document.querySelector(".manzil").textContent = t.contactAddress;
 
+    // FORM
+    document.querySelector(".name").placeholder = t.namePlaceholder;
+    document.querySelector(".email").placeholder = t.emailPlaceholder;
+    document.querySelector(".xabar").placeholder = t.messagePlaceholder;
 
+    document.querySelector(".men__btn").textContent = t.sendBtn;
 
+    // TYPING RESET
+    clearTimeout(typingTimeout);
 
+    wordIndex = 0;
+    letterIndex = 0;
+    isDeleting = false;
 
-            
-        const words = [
-            "Frontend",
-            "Ingiliz tili",
-            "Matematika",
-            "Figma"
-        ];
+    typingElement.textContent = "";
 
-        let wordIndex = 0;
-        let letterIndex = 0;
-        let currentWord = "";
-        let isDeleting = false;
+    typeEffect();
+}
 
-        const text = document.querySelector(".typing-text");
+// ==================== START ====================
+document.addEventListener("DOMContentLoaded", () => {
 
-        function typeEffect(){
+    // SELECT LANGUAGE
+    const langPicker = document.getElementById("language");
 
-            currentWord = words[wordIndex];
+    langPicker.addEventListener("change", (e) => {
+        changeLanguage(e.target.value);
+    });
 
-            if(!isDeleting){
-                text.textContent = currentWord.slice(0, letterIndex++);
-            }else{
-                text.textContent = currentWord.slice(0, letterIndex--);
-            }
+    // DEFAULT LANGUAGE
+    changeLanguage("uz");
 
-            let speed = isDeleting ? 80 : 150;
+    // TELEGRAM BOT
+const token = "8768244549:AAFWbvsRJXlXJ0pqJdAy6M9r305oeo1d0VI";
+const chat_id = "1706575596";
 
-            if(!isDeleting && letterIndex === currentWord.length + 1){
-                speed = 1200;
-                isDeleting = true;
-            }
+    const sendBtn = document.querySelector(".men__btn");
 
-            if(isDeleting && letterIndex === 0){
-                isDeleting = false;
-                wordIndex++;
+    sendBtn.addEventListener("click", function(e) {
 
-                if(wordIndex === words.length){
-                    wordIndex = 0;
-                }
-            }
+        e.preventDefault();
 
-            setTimeout(typeEffect, speed);
+        const name = document.querySelector(".name").value.trim();
+        const email = document.querySelector(".email").value.trim();
+        const msg = document.querySelector(".xabar").value.trim();
+
+        const t = translations[currentLang];
+
+        if (!name || !email || !msg) {
+
+            Swal.fire({
+                icon: "warning",
+                title: t.alertFill
+            });
+
+            return;
         }
 
-        typeEffect();
+        const text = `
+📩 Yangi xabar!
 
+👤 Ism: ${name}
+📧 Email: ${email}
+💬 Xabar: ${msg}
+`;
 
-
-
-                document.addEventListener("DOMContentLoaded", () => {
-        const nameInput = document.querySelector(".name");
-        const emailInput = document.querySelector(".email");
-        const messageInput = document.querySelector(".xabar");
-        const button = document.querySelector(".men__btn");
-
-        const token = "8768244549:AAFWbvsRJXlXJ0pqJdAy6M9r305oeo1d0VI";
-        const chat_id = "1706575596";
-        const telegramUrl = `https://api.telegram.org/bot${token}/sendMessage`;
-
-        const escapeHtml = (value) =>
-            value
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;");
-
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const name = nameInput.value.trim();
-            const email = emailInput.value.trim();
-            const message = messageInput.value.trim();
-
-            const text = `📩 <b>Yangi xabar!</b>
-        👤 Ism: <b>${escapeHtml(name)}</b>
-        📧 Email: <b>${escapeHtml(email)}</b>
-        💬 Xabar: <b>${escapeHtml(message)}</b>`;
-
-            fetch(telegramUrl, {
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: "POST",
+
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
+
             body: JSON.stringify({
                 chat_id,
-                text,
-                parse_mode: "HTML",
-            }),
+                text
             })
-            .then(async (response) => {
-                if (response.ok) {
+        })
+
+        .then(res => {
+
+            if (res.ok) {
+
                 Swal.fire({
                     icon: "success",
-                    title: "Xabar yuborildi!",
+                    title: t.alertSuccess
                 });
 
-                nameInput.value = "";
-                emailInput.value = "";
-                messageInput.value = "";
-                } else {
-                const errorData = await response.json().catch(() => null);
-                Swal.fire({
-                    icon: "error",
-                    title: "Xatolik yuz berdi",
-                    text: errorData?.description || "400 Bad Request",
-                });
-                }
-            })
-            .catch((error) => {
-                Swal.fire({
+                document.querySelector(".name").value = "";
+                document.querySelector(".email").value = "";
+                document.querySelector(".xabar").value = "";
+
+            } else {
+                throw new Error();
+            }
+        })
+
+        .catch(() => {
+
+            Swal.fire({
                 icon: "error",
-                title: "Internet xatosi",
-                text: error.message,
-                });
+                title: t.alertError
             });
+
         });
+
+    });
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function(e) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+
         });
 
+    });
 
-
-
-
-
-       
-        </script>
+});
+</script>
 </body>
 </html>
