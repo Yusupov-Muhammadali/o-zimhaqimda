@@ -1,0 +1,895 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #40513B;
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #40513B;
+        }
+
+        .header__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header__title {
+            color: #898AC4;
+            font-size: 29px;
+            font-weight: 700;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav__list a {
+            color: #EDE9E6;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: .3s;
+        }
+
+        .nav__list a:hover {
+            text-decoration: underline;
+        }
+
+        .select {
+            background: transparent;
+            border: none;
+            color: #EDE9E6;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px 15px;        }
+
+        .hero {
+            padding: 80px 0;
+        }
+
+        .hero__warapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero__content {
+            width: 500px;
+        }
+
+        .hero__title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #EDE9E6;
+        }
+    
+        .typing-text{
+            color: #898AC4;
+            border-right: 3px solid #898AC4;
+            padding-right: 5px;
+            white-space: nowrap;
+            animation: cursor .7s infinite;
+        }
+
+        @keyframes cursor{
+            50%{
+                border-color: transparent;
+            }
+        }
+        .hero__desc {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #EDE9E6;
+        }
+
+        .hero__link {
+            display: flex;
+            width: 200px;
+            height: 60px;
+            border-radius: 64px;
+            justify-content: center;
+            align-items: center;
+            background-color: #898AC4;
+            color: #EDE9E6;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .hero__link:hover {
+            box-shadow: inset 0 0 0 2px white;
+        }
+
+        .hero__img-wrapper img {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .hero__img-wrapper img:hover {
+            box-shadow: 0px 0px 40px 5px #898AC4;
+        }
+
+        .about {
+            padding: 80px 0;
+        }
+
+        .about__wrapper {
+            background-color: #EDE9E6;
+            padding: 50px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section__title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .section__desc {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 60px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .skill-item {
+            width: 100%;
+            text-align: left;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .progress-line {
+            height: 8px;
+            background: #ccc;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .progress-line span {
+            height: 100%;
+            background: #898AC4;
+            position: absolute;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero__warapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero__content {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero__link {
+                margin: 0 auto;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .btns{
+            list-style: none;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .friends{
+            padding: 80px 0;
+        }
+        .friends__wrapper{
+            background-color: #EDE9E6;
+            padding: 50px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .friends__title {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #898AC4;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .friends__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+            padding: 0;
+        }
+        .friends__item {
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        .friends__item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+
+
+
+
+        .saman::after {
+            content: "Samandar";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .saman:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .saman:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .odil::after {
+            content: "Odil";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .odil:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .odil:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .abdulazizu::after {
+            content: "Abdulaziz";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .abdulazizu:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .abdulazizu:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .habib::after {
+            content: "Habibulloh";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .habib:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .habib:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .alish::after {
+            content: "Alisher";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .alish:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .alish:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .abdulazizs::after {
+            content: "Abdulaziz";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .abdulazizs:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .abdulazizs:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .yusuf::after {
+            content: "Muhammad Yusuf";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .yusuf:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .yusuf:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .bilol::after {
+            content: "Bilol";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .bilol:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bilol:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .hoji::after {
+            content: "Hojiakbar";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .hoji:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hoji:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .abdumalik::after {
+            content: "Abdumalik";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .abdumalik:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .abdumalik:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .laziz::after {
+            content: "Laziz";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .laziz:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .laziz:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+        .murtazo::after {
+            content: "Muhammad Murtazo";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(137, 138, 196, 0.85);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(10px);
+        }
+
+        .murtazo:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .murtazo:hover img {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .card a img{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .carousel{
+            margin: 100px auto;
+            width: 100%;
+            height: 490px;
+            border: 5px solid #EDE9E6;
+            display: flex;
+            overflow-x: auto;
+            gap: 1em;
+        }
+        .carousel::-webkit-scrollbar{
+            display: none;
+        }
+        .group{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            animation: spin 5s infinite linear;
+            padding-right: 1em;
+        }
+        .card{
+            flex: 0 0 5em;
+            width: 15em;
+            height: 8em;
+            padding: 1em;
+            background: rgba(137, 138, 196, 0.85);
+            font-size: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            align-content: center;
+        }
+        @keyframes spin {
+            from {translate: 0;}
+            to {translate: -100%;}
+        }
+        .section__title{
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #898AC4;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .ustoz__list{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0;
+            padding-bottom: 50px;
+        }
+        .ustoz__item{
+            width: 300px;
+            border: 3px solid #EDE9E6;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            list-style: none;
+        }
+        .ustoz__item:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .ustoz__item img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .ustoz__content{
+            padding: 15px;
+            text-align: center;
+        }
+        .ustoz__name{
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .ustoz__desc{
+            font-size: 18px;
+            text-align: center;
+            color: #666;
+            line-height: 1.4;
+        }
+
+
+
+
+
+
+
+
+        .contact{
+            padding: 80px 0;
+        }
+        .men__wrapper{
+            width: 1100px;
+            height: 500px;
+            background-color: #898AC4;
+            display: flex;
+            gap: 50px;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .aloqa{
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 500px;
+        }
+        .men__content{
+            width: 500px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+        }
+        .men__btn{
+            background-color: #898AC4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;   
+            font-size: 27px;
+        }
+        .men__btn:hover{
+            background-color: #7579A1;
+        }
+        .name, .email, .message{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .xabar{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            background-color: #f9f9f9;
+            width: 100%;
+            padding-bottom: 60px;
+        }
+        .ism{
+            padding-top: 70px;
+            border-radius: 5px;
+            font-size: 19x;
+            margin-top: 15px;
+            width: 340px;
+            padding-bottom: 10px;
+        }
+        .em{
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 15px;
+            width: 340px;
+            padding-bottom: 10px;
+        }
+        .manzil{
+            border-radius: 5px;
+            font-size: 19px;
+            margin-top: 15px;
+            width: 340px;
+            padding-bottom: 10px;
+        }
+        .aloqa__list{
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin-top: 20px;
+            list-style: none;
+        }
+        .bxl-instagram{
+            font-size: 36px;
+            color: #898AC4;
+        }
+        .bxl-telegram{
+            font-size: 36px;
+            color: #898AC4;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
