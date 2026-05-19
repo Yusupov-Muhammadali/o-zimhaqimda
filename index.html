@@ -172,62 +172,60 @@
             margin-bottom: 40px;
         }
 
-        .skills-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px 60px;
-            width: 100%;
-            max-width: 900px;
-        }
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 60px;
+    width: 100%;
+    max-width: 900px;
+}
 
-        .skill-item {
-            width: 100%;
-            text-align: left;
-        }
+.skill-item {
+    width: 100%;
+    text-align: left;
+}
 
-        .skill-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #333;
-        }
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
 
-        .progress-line {
-            height: 8px;
-            background: #ccc;
-            border-radius: 10px;
-            position: relative;
-        }
+.progress-line {
+    height: 8px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+}
 
-        .progress-line span {
-            height: 100%;
-            background: #898AC4;
-            position: absolute;
-            border-radius: 10px;
-        }
+.progress-line span {
+    height: 100%;
+    background: #898AC4;
+    position: absolute;
+    border-radius: 10px;
+}
 
-        @media (max-width: 768px) {
-            .hero__warapper {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero__content {
-                width: 100%;
-                margin-bottom: 40px;
-            }
-            .hero__link {
-                margin: 0 auto;
-            }
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        .btns{
-            list-style: none;
-        }
-
-
+@media (max-width: 768px) {
+    .hero__warapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero__content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero__link {
+        margin: 0 auto;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+.btns{
+    list-style: none;
+}
 
 
 
@@ -245,10 +243,14 @@
 
 
 
-        .friends{
+
+
+ .friends {
             padding: 80px 0;
+            width: 100%;
         }
-        .friends__wrapper{
+
+        .friends__wrapper {
             background-color: #EDE9E6;
             padding: 50px;
             border-radius: 30px;
@@ -256,16 +258,19 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
+
         .friends__title {
             font-size: 46px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             color: #898AC4;
+            display: flex;
             justify-content: center;
             align-items: center;
-            display: flex;
         }
+
         .friends__list {
             display: flex;
             flex-wrap: wrap;
@@ -273,7 +278,9 @@
             gap: 40px;
             list-style: none;
             padding: 0;
+            width: 100%;
         }
+
         .friends__item {
             width: 350px;
             height: 350px;
@@ -281,27 +288,34 @@
             border-radius: 20px;
             position: relative;
             cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            background-color: #e0dbd7;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
+
+        .friends__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(137, 138, 196, 0.25);
+        }
+
         .friends__item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
         }
 
+        .friends__item:hover img {
+            transform: scale(1.1);
+        }
 
-
-
-
-
-
-        .saman::after {
-            content: "Samandar";
+        .friends__item::after {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 50%;
-            background: rgba(137, 138, 196, 0.85);
+            background: linear-gradient(to top, rgba(137, 138, 196, 0.95) 40%, rgba(137, 138, 196, 0.7) 100%);
             color: white;
             display: flex;
             align-items: center;
@@ -312,359 +326,58 @@
             opacity: 0;
             transition: opacity 0.4s ease, transform 0.4s ease;
             transform: translateY(10px);
+            z-index: 2;
         }
 
-        .saman:hover::after {
+        .friends__item:hover::after {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .saman:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
+        .habib::after { content: "Habibulloh"; }
+        .alish::after { content: "Alisher"; }
+        .abdulazizs::after { content: "Abdulaziz"; }
+        .yusuf::after { content: "Muhammad Yusuf"; }
+        .bilol::after { content: "Bilol"; }
+        .hoji::after { content: "Hojiakbar"; }
+        .abdumalik::after { content: "Abdumalik"; }
+        .laziz::after { content: "Laziz"; }
+        .murtazo::after { content: "Sarvar"; }
+
+        .saman::after, .odil::after, .abdulazizu::after {
+            padding-bottom: 75px;
         }
 
-
-        .odil::after {
-            content: "Odil";
+        .saman::before, .odil::before, .abdulazizu::before {
             position: absolute;
-            bottom: 0;
+            bottom: 110px;
             left: 0;
             width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
+            color: #E2E2F5;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            text-align: center;
             opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
+            transition: opacity 0.4s ease 0.05s, transform 0.4s ease 0.05s;
+            transform: translateY(15px);
+            z-index: 3;
+            pointer-events: none;
         }
 
-        .odil:hover::after {
+        .saman:hover::before, .odil:hover::before, .abdulazizu:hover::before {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .odil:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
+        .saman::after { content: "Samandar"; }
+        .saman::before { content: "«Samimiy va ishonchli»"; }
 
+        .odil::after { content: "Odil"; }
+        .odil::before { content: "«Adolatli va jasur»"; }
 
-        .abdulazizu::after {
-            content: "Abdulaziz";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .abdulazizu:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .abdulazizu:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .habib::after {
-            content: "Habibulloh";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .habib:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .habib:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .alish::after {
-            content: "Alisher";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .alish:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .alish:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .abdulazizs::after {
-            content: "Abdulaziz";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .abdulazizs:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .abdulazizs:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .yusuf::after {
-            content: "Muhammad Yusuf";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .yusuf:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .yusuf:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .bilol::after {
-            content: "Bilol";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .bilol:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .bilol:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .hoji::after {
-            content: "Hojiakbar";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .hoji:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .hoji:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .abdumalik::after {
-            content: "Abdumalik";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .abdumalik:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .abdumalik:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .laziz::after {
-            content: "Laziz";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .laziz:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .laziz:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
-
-        .murtazo::after {
-            content: "Sarvar";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background: rgba(137, 138, 196, 0.85);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 0 0 20px 20px;
-            opacity: 0;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            transform: translateY(10px);
-        }
-
-        .murtazo:hover::after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .murtazo:hover img {
-            transform: scale(1.1);
-            transition: 0.4s;
-        }
-
+        .abdulazizu::after { content: "Abdulaziz"; }
+        .abdulazizu::before { content: "«Kreativ va quvnoq»"; }
 
 
 
@@ -702,7 +415,7 @@
             align-items: center;
             justify-content: center;
             gap: 36px;
-            animation: spin 5s infinite linear;
+            animation: spin 15s infinite linear;
             padding-right: 36px;
         }
         .card{
@@ -899,13 +612,7 @@
 
 
 
-
-
-
-
-
-
-    </style>
+        </style>
 </head>
 <body>
 
@@ -958,65 +665,99 @@
                 Men PDP School’da 3 yildan beri tahsil olaman. Hozirda 7-B sinf o‘quvchisiman. <br>
                 Mening qiziqishlarim frontend dasturlash, Figma dizayn qilish, matematika va ingliz tili kabi fanlarga yo‘naltirilgan.
             </p>
-
             <div class="skills-container">
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>HTML</span>
-                        <span>95%</span>
+                        <span>75%</span>
                     </div>
-                    <div class="progress-line"><span style="width: 95%;"></span></div>
+                    <div class="progress-line"><span style="width: 75%;"></span></div>
                 </div>
 
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>CSS</span>
-                        <span>90%</span>
+                        <span>70%</span>
                     </div>
-                    <div class="progress-line"><span style="width: 90%;"></span></div>
+                    <div class="progress-line"><span style="width: 70%;"></span></div>
                 </div>
 
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>Figma</span>
-                        <span>88%</span>
+                        <span>55%</span>
                     </div>
-                    <div class="progress-line"><span style="width: 88%;"></span></div>
+                    <div class="progress-line"><span style="width: 55%;"></span></div>
                 </div>
 
                 <div class="skill-item">
                     <div class="skill-info">
                         <span>JavaScript</span>
-                        <span>72%</span>
+                        <span>45%</span>
                     </div>
-                    <div class="progress-line"><span style="width: 82%;"></span></div>
+                    <div class="progress-line"><span style="width: 45%;"></span></div>
                 </div>
             </div>
         </div>
     </section>
 
-
     <section class="friends" id="friends">
         <div class="container">
-            <h2 class="friends__title" id="friendsTitle ">Do'stlarim</h2>
-                 <ul class="friends__list">
-                    <li class="friends__item saman"><img src="./rasm/saman11.jpg" alt=""></li>
-                    <li class="friends__item odil"><img src="./rasm/odil1.jpg" alt=""></li>
-                    <li class="friends__item abdulazizu"><img src="./rasm/abdulaziz7.jpg" alt=""></li>
-                    <li class="friends__item habib"><img src="./rasm/habib.jpg" alt=""></li>
-                    <li class="friends__item alish"><img src="./rasm/alish6.jpg" alt=""></li>
-                    <li class="friends__item abdulazizs"><img src="./rasm/abdulaziz10.jpg" alt=""></li>
-                    <li class="friends__item yusuf"><img src="./rasm/ysusf3.jpg" alt=""></li>
-                    <li class="friends__item bilol"><img src="./rasm/bilol5.jpg" alt=""></li>
-                    <li class="friends__item hoji"><img src="./rasm/hoji4.jpg" alt=""></li>
-                    <li class="friends__item abdumalik"><img src="./rasm/" alt=""></li>
-                    <li class="friends__item laziz"><img src="./rasm/laziz8.jpg" alt=""></li>
-                    <li class="friends__item murtazo"><img src="./rasm/sarvar2.jpg" alt=""></li>
-                 </ul>
+            <div class="friends__wrapper">
+                <h2 class="friends__title" id="friendsTitle">Do'stlarim</h2>
+                
+                <ul class="friends__list">
+                    <li class="friends__item saman">
+                        <img src="./rasm/saman11.jpg" alt="Samandar" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Samandar'">
+                    </li>
+                    
+                    <li class="friends__item odil">
+                        <img src="./rasm/odil1.jpg" alt="Odil" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Odil'">
+                    </li>
+                    
+                    <li class="friends__item abdulazizu">
+                        <img src="./rasm/abdulaziz7.jpg" alt="Abdulaziz" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=AbdulazizU'">
+                    </li>
+                    
+                    <li class="friends__item habib">
+                        <img src="./rasm/habib.jpg" alt="Habib" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Habib'">
+                    </li>
+                    
+                    <li class="friends__item alish">
+                        <img src="./rasm/alish6.jpg" alt="Alisher" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Alisher'">
+                    </li>
+                    
+                    <li class="friends__item abdulazizs">
+                        <img src="./rasm/abdulaziz10.jpg" alt="Abdulaziz" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=AbdulazizS'">
+                    </li>
+                    
+                    <li class="friends__item yusuf">
+                        <img src="./rasm/ysusf3.jpg" alt="Yusuf" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Yusuf'">
+                    </li>
+                    
+                    <li class="friends__item bilol">
+                        <img src="./rasm/bilol5.jpg" alt="Bilol" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Bilol'">
+                    </li>
+                    
+                    <li class="friends__item hoji">
+                        <img src="./rasm/hoji4.jpg" alt="Hojiakbar" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Hoji'">
+                    </li>
+                    
+                    <li class="friends__item abdumalik">
+                        <img src="./rasm/" alt="Abdumalik" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Abdumalik'">
+                    </li>
+                    
+                    <li class="friends__item laziz">
+                        <img src="./rasm/laziz8.jpg" alt="Laziz" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Laziz'">
+                    </li>
+                    
+                    <li class="friends__item murtazo">
+                        <img src="./rasm/sarvar2.jpg" alt="Sarvar" onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/adventurer/svg?seed=Sarvar'">
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-
-
 
     <section class="loyiha" id="loyiha">
         <div class="container">
@@ -1045,10 +786,11 @@
                     <div class="card">
                         <a href="https://pdpodamozgarishpdp.netlify.app/" class="loyiha__link"><img src="./odam.png" alt="" class="loyiha__img"></a>
                     </div>
+
+                    <div class="card">
+                        <a href="https://pdpmonkeytypepdp.netlify.app/" class="loyiha__link"><img src="./monkeytype.png" alt="" class="loyiha__img"></a>
+                    </div>
                 </div>
-
-
-
 
                 <div aria-hidden class="group">
                     <div class="card">
@@ -1060,7 +802,7 @@
                     </div>
 
                     <div class="card">
-                        <a href="htgit add .git add .tps://pdpcalculatorpdp.netlify.app/" class="loyiha__link"><img src="./kalkulyator.png" alt="" class="loyiha__img"></a>
+                        <a href="https://pdpcalculatorpdp.netlify.app/" class="loyiha__link"><img src="./kalkulyator.png" alt="" class="loyiha__img"></a>
                     </div>
 
                     <div class="card">
@@ -1073,15 +815,14 @@
                     <div class="card">
                         <a href="https://pdpodamozgarishpdp.netlify.app/" class="loyiha__link"><img src="./odam.png" alt="" class="loyiha__img"></a>
                     </div>
+
+                    <div class="card">
+                        <a href="https://pdpmonkeytypepdp.netlify.app/" class="loyiha__link"><img src="./monkeytype.png" alt="" class="loyiha__img"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
 
     <section class="ustozim" id="ustozim">
         <div class="container">
@@ -1090,8 +831,7 @@
             <ul class="ustoz__list">
                 <li class="ustoz__item">
                     <img src="./rasm/shahloustoz.jpg" alt="">
-
-                <div class="ustoz__content">
+                    <div class="ustoz__content">
                         <h3 class="ustoz__name">Shahlo Doniyorova</h3>
                         <p class="ustoz__desc">Ingliz tili ustozim menga yangi so‘zlar va erkin gapirishni o‘rgatadi.</p>
                     </div>
@@ -1099,7 +839,6 @@
 
                 <li class="ustoz__item">
                     <img src="./rasm/naimustoz.jpg" alt="">
-
                     <div class="ustoz__content">
                         <h3 class="ustoz__name">Naima Roziyeva</h3>
                         <p class="ustoz__desc">Kuratorim menga tartib, motivatsiya va harakat qilishni o‘rgatadi.</p>
@@ -1108,7 +847,6 @@
 
                 <li class="ustoz__item">
                     <img src="./rasm/zoyidjonustoz.jpg" alt="">
-
                     <div class="ustoz__content">
                         <h3 class="ustoz__name">Zoyidjon Nasretdinov</h3>
                         <p class="ustoz__desc">Frontend menga sayt yaratish va kreativ fikrlashni o‘rgatadi.</p>
@@ -1116,8 +854,7 @@
                 </li>
 
                 <li class="ustoz__item">
-                    <img src="./rasm_ali.png" alt="">
-                    
+                    <img src="./rasm/matem.JPG" alt="">
                     <div class="ustoz__content">
                         <h3 class="ustoz__name">Otabek Xo’shboqov</h3>
                         <p class="ustoz__desc">Matematika ustozim mantiqiy fikrlash va tez ishlashni o‘rgatadi.</p>
@@ -1126,34 +863,41 @@
 
                 <li class="ustoz__item">
                     <img src="./rasm/azizbek.jpg" alt="">
-                    
                     <div class="ustoz__content">
                         <h3 class="ustoz__name">Azizbek Ravshanov</h3>
-                        <p class="ustoz__desc">Qoruvullik menga hushyorlik, mas’uliyat va sabrni o‘rgatadi.</p>
+                        <p class="ustoz__desc">Ustozimiz mas’uliyatli va talabchan inson bo‘lib, maktab tartibini qattiq nazorat qiladi.</p>
                     </div>
                 </li>
 
                 <li class="ustoz__item">
-                    <img src="./rasm/azizbek.jpg" alt="">
-                    
+                    <img src="./rasm/irodaustoz2.png" alt="">
                     <div class="ustoz__content">
                         <h3 class="ustoz__name">Iroda Abduvalliyeva</h3>
                         <p class="ustoz__desc">Figma menga kreativ dizayn yaratish va zamonaviy fikrlashni o‘rgatadi.</p>
+                    </div>
+                </li>
+
+                <li class="ustoz__item">
+                    <img src="./rasm/fizika.JPG" alt="">
+                    <div class="ustoz__content">
+                        <h3 class="ustoz__name">Abdualiev Dilmurod</h3>
+                        <p class="ustoz__desc">Fizika ustozim bilimli va sabrli inson, murakkab mavzularni ham oson tushuntira oladi.</p>
+                    </div>
+                </li>
+
+                <li class="ustoz__item">
+                    <img src="./rasm/tarix.JPG" alt="">
+                    <div class="ustoz__content">
+                        <h3 class="ustoz__name">Karimov Elyor</h3>
+                        <p class="ustoz__desc">Tarix ustozim dono va qiziqarli dars o‘tadigan inson, tarixiy mavzularni juda tushunarli qilib anlatadi.</p>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
 
-
-
-
-
-
-
     <section class="men" id="men">
         <div class="container men__wrapper">
-           
             <div class="aloqa">
                 <h4 class="ism">Telefon: +998938580979</h4>
                 <h4 class="em">Email: ymuhammadali214@gmail.com</h4>
@@ -1177,15 +921,9 @@
             </div>
         </div>
     </section>
-
 </main>
 
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
 
 <script>
 // ==================== TARJIMALAR ====================
@@ -1210,17 +948,22 @@ const translations = {
         projectsTitle: "Loyihalarim",
         teachersTitle: "Ustozlarim",
 
-        teacher1: "Shahlo Donyorova",
+        teacher1: "Shahlo Doniyorova",
         teacher1Desc: "Ingliz tili ustozim menga yangi so‘zlar va erkin gapirishni o‘rgatadi.",
-
         teacher2: "Naima Roziyeva",
         teacher2Desc: "Kuratorim menga tartib, motivatsiya va harakat qilishni o‘rgatadi.",
-
         teacher3: "Zoyidjon Nasretdinov",
         teacher3Desc: "Frontend menga sayt yaratish va kreativ fikrlashni o‘rgatadi.",
-
         teacher4: "Otabek Xo’shboqov",
         teacher4Desc: "Matematika ustozim mantiqiy fikrlash va tez ishlashni o‘rgatadi.",
+        teacher5: "Azizbek Ravshanov",
+        teacher5Desc: "Ustozimiz mas’uliyatli va talabchan inson bo‘lib, maktab tartibini qattiq nazorat qiladi.",
+        teacher6: "Iroda Abduvalliyeva",
+        teacher6Desc: "Figma menga kreativ dizayn yaratish va zamonaviy fikrlashni o‘rgatadi.",
+        teacher7: "Abdualiev Dilmurod",
+        teacher7Desc: "Fizika ustozim bilimli va sabrli inson, murakkab mavzularni ham oson tushuntira oladi.",
+        teacher8: "Karimov Elyor",
+        teacher8Desc: "Tarix ustozim dono va qiziqarli dars o‘tadigan inson, tarixiy mavzularni juda tushunarli qilib anlatadi.",
 
         contactPhone: "Telefon: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
@@ -1259,15 +1002,20 @@ const translations = {
 
         teacher1: "Шахло Донёрова",
         teacher1Desc: "Учитель английского языка учит меня новым словам и свободной речи.",
-
         teacher2: "Наима Розыева",
         teacher2Desc: "Мой куратор учит меня дисциплине, мотивации и действию.",
-
         teacher3: "Зойиджон Насретдинов",
         teacher3Desc: "Frontend учит меня создавать сайты и креативно мыслить.",
-
         teacher4: "Отабек Хошбоков",
-        teacher4Desc: "Учитель математики учит меня логическому мышлению и быстрой работе.",
+        teacher4Desc: "Учитель математики учит меня логическому мнению и быстрой работе.",
+        teacher5: "Азизбек Равшанов",
+        teacher5Desc: "Наш учитель — ответственный и требовательный человек, который строго следит за порядком в школе.",
+        teacher6: "Ирода Абдуваллиева",
+        teacher6Desc: "Figma учит меня создавать креативный дизайн и современному мнению.",
+        teacher7: "Абдуалиев Дильмурод",
+        teacher7Desc: "Мой учитель физики — знающий и терпеливый человек, он может легко объяснить даже сложные темы.",
+        teacher8: "Каримов Эльёр",
+        teacher8Desc: "Мой учитель истории — мудрый и интересный человек, он очень понятно объясняет исторические темы.",
 
         contactPhone: "Телефон: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
@@ -1306,15 +1054,20 @@ const translations = {
 
         teacher1: "Shahlo Donyorova",
         teacher1Desc: "My English teacher teaches me new words and fluent speaking.",
-
         teacher2: "Naima Roziyeva",
         teacher2Desc: "My curator teaches me discipline, motivation and action.",
-
         teacher3: "Zoyidjon Nasretdinov",
         teacher3Desc: "Frontend teaches me to create websites and think creatively.",
-
         teacher4: "Otabek Xo’shboqov",
         teacher4Desc: "My math teacher teaches me logical thinking and fast work.",
+        teacher5: "Azizbek Ravshanov",
+        teacher5Desc: "Our teacher is a responsible and strict person who carefully maintains school order.",
+        teacher6: "Iroda Abduvalliyeva",
+        teacher6Desc: "Figma teaches me to create creative designs and modern thinking.",
+        teacher7: "Abdualiev Dilmurod",
+        teacher7Desc: "My physics teacher is a knowledgeable and patient person, who can easily explain even complex topics.",
+        teacher8: "Karimov Elyor",
+        teacher8Desc: "My history teacher is a wise and interesting person, who explains historical topics very clearly.",
 
         contactPhone: "Phone: +998938580979",
         contactEmail: "Email: ymuhammadali214@gmail.com",
@@ -1332,14 +1085,12 @@ const translations = {
     }
 };
 
-// ==================== TYPING WORDS ====================
 const typingWords = {
     uz: ["Frontend", "Ingliz tili", "Matematika", "Figma"],
     ru: ["Frontend", "Английский", "Математика", "Figma"],
     en: ["Frontend", "English", "Mathematics", "Figma"]
 };
 
-// ==================== GLOBAL ====================
 let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
@@ -1348,9 +1099,7 @@ let currentLang = "uz";
 const typingElement = document.querySelector(".typing-text");
 let typingTimeout;
 
-// ==================== TYPING EFFECT ====================
 function typeEffect() {
-
     const words = typingWords[currentLang];
     const currentWord = words[wordIndex];
 
@@ -1375,15 +1124,11 @@ function typeEffect() {
     typingTimeout = setTimeout(typeEffect, speed);
 }
 
-// ==================== LANGUAGE CHANGE ====================
 function changeLanguage(lang) {
-
     currentLang = lang;
     const t = translations[lang];
 
-    // NAVIGATION
     const navLinks = document.querySelectorAll(".nav__list a");
-
     navLinks[0].textContent = t.home;
     navLinks[1].textContent = t.about;
     navLinks[2].textContent = t.friends;
@@ -1391,175 +1136,108 @@ function changeLanguage(lang) {
     navLinks[4].textContent = t.teachers;
     navLinks[5].textContent = t.contact;
 
-    // HERO
     document.getElementById("heroHi").textContent = t.heroHi;
     document.getElementById("hero-end").textContent = t.heroStudy;
-
     document.querySelector(".hero__desc").textContent = t.heroDesc;
     document.querySelector(".hero__link").textContent = t.heroBtn;
 
-    // ABOUT
     document.querySelectorAll(".section__title")[0].textContent = t.aboutTitle;
     document.querySelector(".section__desc").innerHTML = t.aboutDesc;
 
-    // FRIENDS
     document.querySelector(".friends__title").textContent = t.friendsTitle;
-
-    // PROJECTS
     document.querySelectorAll(".section__title")[1].textContent = t.projectsTitle;
-
-    // TEACHERS
     document.querySelectorAll(".section__title")[2].textContent = t.teachersTitle;
 
-    // TEACHER NAMES
     const teacherNames = document.querySelectorAll(".ustoz__name");
     const teacherDescs = document.querySelectorAll(".ustoz__desc");
 
     teacherNames[0].textContent = t.teacher1;
     teacherDescs[0].textContent = t.teacher1Desc;
-
     teacherNames[1].textContent = t.teacher2;
     teacherDescs[1].textContent = t.teacher2Desc;
-
     teacherNames[2].textContent = t.teacher3;
     teacherDescs[2].textContent = t.teacher3Desc;
-
     teacherNames[3].textContent = t.teacher4;
     teacherDescs[3].textContent = t.teacher4Desc;
+    teacherNames[4].textContent = t.teacher5;
+    teacherDescs[4].textContent = t.teacher5Desc;
+    teacherNames[5].textContent = t.teacher6;
+    teacherDescs[5].textContent = t.teacher6Desc;
+    teacherNames[6].textContent = t.teacher7;
+    teacherDescs[6].textContent = t.teacher7Desc;
+    teacherNames[7].textContent = t.teacher8;
+    teacherDescs[7].textContent = t.teacher8Desc;
 
-    // CONTACT
     document.querySelector(".ism").textContent = t.contactPhone;
     document.querySelector(".em").textContent = t.contactEmail;
     document.querySelector(".manzil").textContent = t.contactAddress;
 
-    // FORM
     document.querySelector(".name").placeholder = t.namePlaceholder;
     document.querySelector(".email").placeholder = t.emailPlaceholder;
     document.querySelector(".xabar").placeholder = t.messagePlaceholder;
-
     document.querySelector(".men__btn").textContent = t.sendBtn;
 
-    // TYPING RESET
     clearTimeout(typingTimeout);
-
     wordIndex = 0;
     letterIndex = 0;
     isDeleting = false;
-
     typingElement.textContent = "";
-
     typeEffect();
 }
 
-// ==================== START ====================
 document.addEventListener("DOMContentLoaded", () => {
-
-    // SELECT LANGUAGE
     const langPicker = document.getElementById("language");
-
     langPicker.addEventListener("change", (e) => {
         changeLanguage(e.target.value);
     });
 
-    // DEFAULT LANGUAGE
     changeLanguage("uz");
 
-    // TELEGRAM BOT
-const token = "8768244549:AAFWbvsRJXlXJ0pqJdAy6M9r305oeo1d0VI";
-const chat_id = "1706575596";
-
+    const token = "8768244549:AAFWbvsRJXlXJ0pqJdAy6M9r305oeo1d0VI";
+    const chat_id = "1706575596";
     const sendBtn = document.querySelector(".men__btn");
 
     sendBtn.addEventListener("click", function(e) {
-
         e.preventDefault();
-
         const name = document.querySelector(".name").value.trim();
         const email = document.querySelector(".email").value.trim();
         const msg = document.querySelector(".xabar").value.trim();
-
         const t = translations[currentLang];
 
         if (!name || !email || !msg) {
-
-            Swal.fire({
-                icon: "warning",
-                title: t.alertFill
-            });
-
+            Swal.fire({ icon: "warning", title: t.alertFill });
             return;
         }
 
-        const text = `
-📩 Yangi xabar!
-
-👤 Ism: ${name}
-📧 Email: ${email}
-💬 Xabar: ${msg}
-`;
+        const text = `📩 Yangi xabar!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n💬 Xabar: ${msg}`;
 
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                chat_id,
-                text
-            })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id, text })
         })
-
         .then(res => {
-
             if (res.ok) {
-
-                Swal.fire({
-                    icon: "success",
-                    title: t.alertSuccess
-                });
-
+                Swal.fire({ icon: "success", title: t.alertSuccess });
                 document.querySelector(".name").value = "";
                 document.querySelector(".email").value = "";
                 document.querySelector(".xabar").value = "";
-
-            } else {
-                throw new Error();
-            }
+            } else { throw new Error(); }
         })
-
         .catch(() => {
-
-            Swal.fire({
-                icon: "error",
-                title: t.alertError
-            });
-
+            Swal.fire({ icon: "error", title: t.alertError });
         });
-
     });
 
-    // SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
         anchor.addEventListener("click", function(e) {
-
             e.preventDefault();
-
             const target = document.querySelector(this.getAttribute("href"));
-
             if (target) {
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
+                target.scrollIntoView({ behavior: "smooth" });
             }
-
         });
-
     });
-
 });
 </script>
 </body>
-</html>
